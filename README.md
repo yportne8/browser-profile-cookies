@@ -13,23 +13,29 @@ pip3 install browser-profile-cookies
 ```python
 from profile_cookies import Profile
 
-Profile.available_browsers() # -> static method, a dict of all local Chromium browser names and paths
+# -> static method, a dict of all local Chromium browser names and paths
+Profile.available_browsers() 
 
-profile = Profile() # defaults to the Default profile for Edge Browser
+# defaults to the 'Default' profile for 'Edge' browser
+profile = Profile() 
 
-# if Edge isn't installed, profile can be created for any locally installed Chromium-based browser
+# if Edge isn't installed, profile can be initialized any locally installed Chromium-based browser
 profile = Profile(browser="chrome")
 
-profile.browser = "vivaldi" # the browser can be reassigned with cascading changes
+# the browser can be reassigned with cascading changes
+profile.browser = "vivaldi" 
 profile.available_profiles() # -> dict of all browser profiles and paths
 
-profile.profile = "profile 1" # profile can be reassigned with cascading changes
+# profile can be reassigned with cascading changes
+profile.profile = "profile 1" 
 profile.cookiejar() # -> http.cookiejar.Cookiejar of all stored cookies for 'Profile 1'
 
+# -> http.cookiejar.Cookiejar for the requested domain and profile
 domain = "msn"
-profile.cookie(domain) # -> http.cookiejar.Cookiejar for the requested domain and profile
+profile.cookie(domain)
 
+# -> string formatted cookies for the requested domain and profile
 domain = "msn.com"
-profile.cookiestring(domain) # -> string formatted cookies for the requested domain and profile
+profile.cookiestring(domain) 
 ```
 Retrieved cookies can be used when making requests via urllib or through a package like requests.
