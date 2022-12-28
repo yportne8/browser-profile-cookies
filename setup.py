@@ -1,15 +1,15 @@
 from setuptools import setup
+from profile_cookies import __version__
 
 setup(
-    name='browser-cookie3',
-    version='0.16.0',
-    packages=['browser_cookie3'],
-    # look for package contents in current directory
-    package_dir={'browser_cookie3': '.'},
-    author='Boris Babic',
-    author_email='boris.ivan.babic@gmail.com',
-    description='Loads cookies from your browser into a cookiejar object so can download with urllib and other libraries the same content you see in the web browser.',
-    url='https://github.com/borisbabic/browser_cookie3',
-    install_requires=['pyaes', 'pbkdf2', 'keyring', 'lz4', 'pycryptodome', 'SecretStorage'],
-    license='lgpl'
+    name='browser-profile-cookies',
+    version=__version__.version,
+    packages=['profile_cookies'],
+    python_requires='>=3.9',
+    author='C.Kim',
+    author_email='yportne8@gmail.com',
+    description='Decrypts encrypted cookies from multiple profiles in Chromium browsers on Windows.',
+    url='https://github.com/yportne8/profile-cookies',
+    install_requires=['pycryptodome>=3.11.0'],
+    license='mit'
 )
