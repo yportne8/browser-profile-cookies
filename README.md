@@ -1,4 +1,4 @@
-#🍪 browser-profile-cookies 🍪#
+🍪 # browser-profile-cookies #  🍪
 
 * ***What does it do?*** Retrieves decrypted cookies from your browser.
 * ***Which browsers are supported?*** Known Chromium-based browsers.
