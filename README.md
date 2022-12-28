@@ -39,4 +39,4 @@ profile.cookie(domain)
 domain = "msn.com"
 profile.cookiestring(domain) 
 ```
-Retrieved cookies can be used when making requests via urllib or through a package like requests.
+## Retrieved cookies can be used when making requests via urllib or through a package like requests. ##
